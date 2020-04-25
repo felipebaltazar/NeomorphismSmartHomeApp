@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:neo="clr-namespace:Xamarin.Forms.NeoControls;assembly=Xamarin.Forms.NeoControls"
+             xmlns:extensions="clr-namespace:NeomorphismSmartHomeApp.Extensions"
+             mc:Ignorable="d"
+             x:Class="NeomorphismSmartHomeApp.MainPage"
+             BackgroundColor="#e3edf7">
+
+    <Grid HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand"
+          ColumnSpacing="12"
+          Padding="35">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="50*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Orientation="Vertical" Spacing="0">
+            <Label Text="Home"
+                   FontFamily="RobotoCondensedRegular"
+                   FontSize="Title" TextColor="Black"/>
+
+            <Label Text="Lorem Ipsum is"
+                   FontFamily="RobotoCondensedBold"
+                   FontSize="Micro" TextColor="Black"/>
+        </StackLayout>
+
+        <neo:NeoButton Grid.Row="1"
+                       Elevation=".25"
+                       CornerRadius="70,20,20,20"
+                       BackgroundColor="#e3edf7">
+            
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="30">
+                
+                <Image VerticalOptions="Start"
+                       HorizontalOptions="Start"
+                       HeightRequest="40"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.SmartTv.png }"/>
+                
+                <Label Text="Smart Tv"
+                       FontFamily="RobotoCondensedBold"
+                       FontSize="Small"
+                       TextColor="#95a3b8"
+                       VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+            
+        </neo:NeoButton>
+
+        <neo:NeoButton Grid.Row="1"
+                       Grid.Column="1"
+                       Elevation=".25"
+                       CornerRadius="20,70,20,20"
+                       BackgroundColor="#e3edf7">
+            
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="30">
+                
+                <Image VerticalOptions="Start"
+                       HorizontalOptions="Start"
+                       HeightRequest="40"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.Wifi.png }"/>
+
+                <Label Text="Wifi"
+                       FontFamily="RobotoCondensedBold"
+                       FontSize="Small"
+                       TextColor="#95a3b8"
+                       VerticalOptions="EndAndExpand"/>
+                
+            </StackLayout>
+        </neo:NeoButton>
+
+        <neo:NeoButton Grid.Row="2"
+                       Elevation=".25"
+                       CornerRadius="20,20,70,20"
+                       BackgroundColor="#e3edf7">
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="30">
+
+                <Image VerticalOptions="Start"
+                       HorizontalOptions="Start"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.Temperature.png }"/>
+
+                <Label Text="Temperature"
+                       FontFamily="RobotoCondensedBold"
+                       FontSize="Small"
+                       TextColor="#95a3b8"
+                       VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </neo:NeoButton>
+
+        <neo:NeoButton Grid.Row="2"
+                       Grid.Column="1"
+                       Elevation=".25"
+                       CornerRadius="20,20,20,70"
+                       BackgroundColor="#e3edf7">
+            
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="30">
+
+                <Image VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       HeightRequest="30"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.AddMore.png }"/>
+
+                <Label Text="Add more"
+                       FontFamily="RobotoCondensedBold"
+                       FontSize="Small"
+                       TextColor="#95a3b8"
+                       VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </neo:NeoButton>
+
+        <Label Text="Temperature" FontFamily="RobotoCondensedRegular" Grid.Row="3" VerticalOptions="Center"
+               FontSize="Medium" TextColor="Black"/>
+
+        <Label Text="Lorem Ipsum is simply dummy" Grid.Row="3" Grid.ColumnSpan="2" 
+               FontFamily="RobotoCondensedRegular"
+               VerticalOptions="End"
+               FontSize="Micro"  TextColor="Gray"/>
+
+        <Label Text="20°C" FontSize="37" FontFamily="RobotoCondensedLight"  Grid.Row="3" Grid.Column="1"
+               VerticalOptions="Center" HorizontalOptions="End" TextColor="Gray"/>
+
+        <neo:NeoProgressView x:Name="progressBar" Margin="10,0,10,27" Grid.Row="4" BarColor="Orange" Elevation=".25"
+                             Thickness="20" BackgroundColor="#e3edf7" Grid.ColumnSpan="2">
+            
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand">
+
+                <BoxView Margin="40,28,15,28" WidthRequest=".8" Color="#95a3b8" />
+                <BoxView Margin="15,28" WidthRequest=".8" Color="#95a3b8" />
+                <BoxView Margin="15,28" WidthRequest=".8" Color="#95a3b8" />
+                <BoxView Margin="15,28" WidthRequest=".8" Color="#95a3b8" />
+                <BoxView Margin="15,28" WidthRequest=".8" Color="#95a3b8" />
+                <BoxView Margin="15,28" WidthRequest=".8" Color="#95a3b8" />
+                
+                <Label Text="32°C"
+                       TextColor="#95a3b8"
+                       FontFamily="RobotoCondensedBold"
+                       VerticalOptions="FillAndExpand"
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </neo:NeoProgressView>
+
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="5" Grid.ColumnSpan="2"
+                     Spacing="20" Margin="0,12,0,0">
+
+            <neo:NeoButton WidthRequest="80"
+                           CornerRadius="35"
+                           ClickMode="Toggle"
+                           BackgroundColor="#e3edf7"
+                           Elevation=".25">
+                
+                <Image VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       HeightRequest="40"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.Metrics.png }"/>
+            </neo:NeoButton>
+
+            <neo:NeoButton WidthRequest="80"
+                           CornerRadius="35"
+                           ClickMode="Toggle"
+                           Elevation=".25"
+                           BackgroundColor="#e3edf7">
+                
+                <Image VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       HeightRequest="40"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.Profile.png }"/>
+            </neo:NeoButton>
+
+            <neo:NeoButton WidthRequest="80"
+                           CornerRadius="35"
+                           ClickMode="Toggle"
+                           Elevation=".25"
+                           BackgroundColor="#e3edf7">
+                
+                <Image VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       HeightRequest="40"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.Light.png }"/>
+            </neo:NeoButton>
+
+            <neo:NeoButton WidthRequest="80"
+                           CornerRadius="35"
+                           ClickMode="Toggle"
+                           Elevation=".25"
+                           BackgroundColor="#e3edf7">
+                
+                <Image VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       HeightRequest="40"
+                       Source="{extensions:ImageResource NeomorphismSmartHomeApp.Resources.Images.Bell.png }"/>
+            </neo:NeoButton>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

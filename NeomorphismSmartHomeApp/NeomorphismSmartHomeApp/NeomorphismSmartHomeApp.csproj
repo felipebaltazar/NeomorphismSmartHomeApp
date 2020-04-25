@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\RobotoCondensed-Bold.ttf" />
+    <None Remove="Resources\Fonts\RobotoCondensed-Light.ttf" />
+    <None Remove="Resources\Fonts\RobotoCondensed-Regular.ttf" />
+    <None Remove="Resources\Images\AddMore.png" />
+    <None Remove="Resources\Images\Bell.png" />
+    <None Remove="Resources\Images\Light.png" />
+    <None Remove="Resources\Images\Metrics.png" />
+    <None Remove="Resources\Images\Profile.png" />
+    <None Remove="Resources\Images\SmartTv.png" />
+    <None Remove="Resources\Images\Temperature.png" />
+    <None Remove="Resources\Images\Wifi.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\RobotoCondensed-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\RobotoCondensed-Light.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\RobotoCondensed-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Images\AddMore.png" />
+    <EmbeddedResource Include="Resources\Images\Bell.png" />
+    <EmbeddedResource Include="Resources\Images\Light.png" />
+    <EmbeddedResource Include="Resources\Images\Metrics.png" />
+    <EmbeddedResource Include="Resources\Images\Profile.png" />
+    <EmbeddedResource Include="Resources\Images\SmartTv.png" />
+    <EmbeddedResource Include="Resources\Images\Temperature.png" />
+    <EmbeddedResource Include="Resources\Images\Wifi.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.657" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="Xamarin.Forms.NeoControls" Version="1.0.0-pre" />
+  </ItemGroup>
+</Project>
